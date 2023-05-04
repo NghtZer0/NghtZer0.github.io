@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2023/05/04/%E5%86%85%E5%AD%98%E9%A9%AC%EF%BC%88%E6%9C%AA%E5%A1%AB%E5%9D%91%EF%BC%89/"/>
+      <url>/2023/05/04/%E5%86%85%E5%AD%98%E9%A9%AC%EF%BC%88%E6%9C%AA%E5%A1%AB%E5%9D%91%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p>Java Servlet前置知识</p><p>Servlet/Filter/Listener Java Web三大件</p><h3 id="1-Servlet"><a href="#1-Servlet" class="headerlink" title="1.Servlet"></a>1.Servlet</h3><p>Servlet是服务期端的Java的应用程序，用于处理http请求并做出相应的响应。</p><p><img src="https://s2.loli.net/2023/05/04/c9diYKwZAu1UQVb.png" alt="7200f7125f97563204de7ea26dc35c62.png"></p><h2 id="2-Filter"><a href="#2-Filter" class="headerlink" title="2.Filter"></a>2.Filter</h2><p>介于Web和Servlet之间的过滤器，用于过滤未到达Servlet的请求或者由Servlet生成但还没有返回响应</p><p>（可见上图）</p><h2 id="3-listener"><a href="#3-listener" class="headerlink" title="3.listener"></a>3.listener</h2><p>listener是用于监听某些特定动作的监听器。当特定动作发生时，监听该动作的监听器会自动调用相应的方法，比如</p><p><img src="https://s2.loli.net/2023/05/04/TPpq5HERw7okcVd.png" alt="f6ffb2c6e921b812dd6da32a017023e8.png"></p><p>解释一下上图，但我们创建一个session时，会自动调用HttpSessionListener中的sessionCreated，而当session被销毁的时候也同时会调用 sessionDestroyed() 方法</p><h2 id="内存马的攻击面"><a href="#内存马的攻击面" class="headerlink" title="内存马的攻击面"></a>内存马的攻击面</h2><p>webshell实际上也是一种web服务，所以可以有以下几种思路</p><p>1.动态注册/字节码替换 interceptor/controller（使用框架如 spring/struts2/jfinal）</p><p>2.动态注册/字节码替换 使用责任链设计模式的中间件、框架的实现（例如 Tomcat 的 Pipeline &amp; Valve，Grizzly 的 FilterChain &amp; Filter 等等）</p><p>3.动态注册/字节码替换 servlet-api 的具体实现 servlet/filter/listener</p><p>4.动态注册/字节码替换一些定时任务的具体实现 比如 TimeTask等</p><p>所以，webshell作为一个后门，实际上我们需要他完成的工作室能够接受恶意注入并回显。</p><p>（后面设计的知识还没学，过几天做回来填坑）</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 内存马 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sql注入基本知识</title>
       <link href="/2023/04/24/sql%E6%B3%A8%E5%85%A5/"/>
       <url>/2023/04/24/sql%E6%B3%A8%E5%85%A5/</url>
