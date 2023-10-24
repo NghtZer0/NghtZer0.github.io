@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>数据结构</title>
+      <link href="/2023/10/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <url>/2023/10/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+      
+        <content type="html"><![CDATA[<p>数据结构是一门研究数据组织存储和运算的一般方法的学科。</p><p>数据结构中有几种类型</p><ol><li><p>线性表</p><p>逻辑特征：一对一</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PHP学习</title>
       <link href="/2023/07/01/PHP%E5%AD%A6%E4%B9%A0/"/>
       <url>/2023/07/01/PHP%E5%AD%A6%E4%B9%A0/</url>
