@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>网络渗透测试</title>
+      <link href="/2023/10/30/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E8%AF%BE%E7%A8%8B%EF%BC%881%EF%BC%89/"/>
+      <url>/2023/10/30/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E8%AF%BE%E7%A8%8B%EF%BC%881%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h3 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h3><p>物理地址（也可以叫做mac）和IP地址</p><h4 id="物理地址："><a href="#物理地址：" class="headerlink" title="物理地址："></a>物理地址：</h4><p>存储在网卡中，是网卡出厂时带的，是唯一不会变的（追踪地址的时候追踪的也是物理地址）</p><h4 id="IP地址："><a href="#IP地址：" class="headerlink" title="IP地址："></a>IP地址：</h4><p>是计算机在网络中的唯一身份ID，与现实世界中快递的配送需要有具体的住宅地址是一个道理。</p><h5 id="windows中查看自己的地址"><a href="#windows中查看自己的地址" class="headerlink" title="windows中查看自己的地址"></a>windows中查看自己的地址</h5><p>cmd启动命令指令符</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig/all</span><br></pre></td></tr></table></figure><h5 id="linux中查看自己的地址"><a href="#linux中查看自己的地址" class="headerlink" title="linux中查看自己的地址"></a>linux中查看自己的地址</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig -all</span><br></pre></td></tr></table></figure><h3 id="PE启动盘"><a href="#PE启动盘" class="headerlink" title="PE启动盘"></a>PE启动盘</h3><p>其实就是在U盘中提前预装好系统，当进入的时候直接访问U盘中的系统而不是电脑的系统。</p><p>如果得到一个人的电脑，可以用PE启动盘访问它的数据盘（好像是这样的）</p><h3 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h3><h4 id="主动扫描"><a href="#主动扫描" class="headerlink" title="主动扫描"></a>主动扫描</h4><p>给出指定的目标主机，对目标主机主动发起扫描</p><h5 id="主动扫描工具："><a href="#主动扫描工具：" class="headerlink" title="主动扫描工具："></a>主动扫描工具：</h5><p>Nmap</p><h4 id="被动扫描"><a href="#被动扫描" class="headerlink" title="被动扫描:"></a>被动扫描:</h4><p>在目标无法察觉的情况下进行的信息收集</p><p>（可以理解为，如果我要知道一个A的信息，我不去问A而去问B，这样我得到了A的信息，A也不知道我得到了他的信息）</p><h5 id="被动扫描的工具"><a href="#被动扫描的工具" class="headerlink" title="被动扫描的工具"></a>被动扫描的工具</h5><p>Maltego<br>Recon-NG<br>ZoomEye</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据结构</title>
       <link href="/2023/10/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
       <url>/2023/10/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
