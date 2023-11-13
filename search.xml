@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>网络渗透测试CH3</title>
+      <link href="/2023/11/13/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH3/"/>
+      <url>/2023/11/13/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH3/</url>
+      
+        <content type="html"><![CDATA[<h3 id="OSINT"><a href="#OSINT" class="headerlink" title="OSINT"></a>OSINT</h3><p>开源情报，指的是从公共资源中手机信息以在情报环境中使用他。</p><h2 id="内网，DMZ，外网"><a href="#内网，DMZ，外网" class="headerlink" title="内网，DMZ，外网"></a>内网，DMZ，外网</h2><p>DMZ是位于两个防火墙之间的空间，比    Internet的安全性高，比内网的安全性低。DMZ的中文称呼是隔离区，也称为非军事区</p><h3 id="内网，DMZ，外网之间的访问策略"><a href="#内网，DMZ，外网之间的访问策略" class="headerlink" title="内网，DMZ，外网之间的访问策略"></a>内网，DMZ，外网之间的访问策略</h3><h4 id="1-内网可以访问外网"><a href="#1-内网可以访问外网" class="headerlink" title="1.内网可以访问外网"></a>1.内网可以访问外网</h4><p>内网用户可以访问外网，在这里要进行源地址转换</p><h4 id="2-内网用户可以访问DMZ"><a href="#2-内网用户可以访问DMZ" class="headerlink" title="2.内网用户可以访问DMZ"></a>2.内网用户可以访问DMZ</h4><p>方便内网用户使用和管理DMZ的服务器</p><h4 id="3-外网不能访问内网"><a href="#3-外网不能访问内网" class="headerlink" title="3.外网不能访问内网"></a>3.外网不能访问内网</h4><h4 id="4-外网可以访问DMZ"><a href="#4-外网可以访问DMZ" class="headerlink" title="4.外网可以访问DMZ"></a>4.外网可以访问DMZ</h4><h4 id="5-DMZ不可以访问内网"><a href="#5-DMZ不可以访问内网" class="headerlink" title="5.DMZ不可以访问内网"></a>5.DMZ不可以访问内网</h4><h4 id="6-DMZ不可以访问外网"><a href="#6-DMZ不可以访问外网" class="headerlink" title="6.DMZ不可以访问外网"></a>6.DMZ不可以访问外网</h4><p>这一条有例外，比如将邮件服务器放置到DMZ就需要能够访问到外网。</p><h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p>内容分发网路，采用更大量的缓存服务器，不知放在用户相对集中的区域，当用户访问的时候利用全局负载技术，将用户的访问只想距离最近的缓存服务器上。</p><p>简单来说就是在用户的附近建立一个本地仓库，就近给你内容（发货）</p><p>可以看这一篇</p><p><a href="https://zhuanlan.zhihu.com/p/52362950">到底什么是CDN？ - 知乎 (zhihu.com)</a></p><h2 id="WAF"><a href="#WAF" class="headerlink" title="WAF"></a>WAF</h2><p>WEB应用防火墙</p><p>带宽的单位<strong>dps</strong>，当然也可以mbps</p><p><strong>hash是用来校验的</strong></p><h2 id="TTL—网络中的生存时间"><a href="#TTL—网络中的生存时间" class="headerlink" title="TTL—网络中的生存时间"></a>TTL—网络中的生存时间</h2><p>每经过一个路由器就会-1</p><p>不同的操作系统对TTL的初始值是不同的，比如</p><p><a href="https://imgse.com/i/piJSUE9"><img src="https://z1.ax1x.com/2023/11/13/piJSUE9.png" alt="piJSUE9.png"></a></p><p>我ping自己的本地是128，但是我ping</p><p>作业：</p><ul><li>与ZoomEye功能类似的搜索引擎还有哪些？</li></ul><p>奇安信的鹰图，fofa，站长之家等等</p><ul><li>子域名收集</li></ul><p><a href="https://imgse.com/i/piJS6De"><img src="https://z1.ax1x.com/2023/11/13/piJS6De.png" alt="piJS6De.png"></a></p><ul><li>利用ZoomEye进行相关搜索</li></ul><p><a href="https://imgse.com/i/piJS48P"><img src="https://z1.ax1x.com/2023/11/13/piJS48P.png" alt="piJS48P.png"></a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网络渗透测试</title>
       <link href="/2023/11/06/CH2/"/>
       <url>/2023/11/06/CH2/</url>
