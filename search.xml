@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>网络渗透测试CH6</title>
+      <link href="/2023/12/08/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH6/"/>
+      <url>/2023/12/08/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH6/</url>
+      
+        <content type="html"><![CDATA[<h4 id="RFC1597"><a href="#RFC1597" class="headerlink" title="RFC1597:"></a>RFC1597:</h4><p>一种保存地址空间的方法，这种方法不用给某个企业内部的私有主机分配全局唯一的IP地址，但是允许企业内部之间吗所有主机之间以及企业外部的所有共有主机之间的完全的网络连接。</p><h4 id="IP在公网中是唯一的"><a href="#IP在公网中是唯一的" class="headerlink" title="IP在公网中是唯一的"></a>IP在公网中是唯一的</h4><p>在个人的私有网络中并不是，比如你的内网地址是192.168.xxx.xxx，另一个人的也是，但你不能说你们的公网IP是唯一的，所以要加限制条件</p><h4 id="网络地址转换："><a href="#网络地址转换：" class="headerlink" title="网络地址转换："></a>网络地址转换：</h4><h5 id="SNAT：源网络地址转换："><a href="#SNAT：源网络地址转换：" class="headerlink" title="SNAT：源网络地址转换："></a><strong>SNAT：</strong>源网络地址转换：</h5><p>用于将内部网络中的源IP地址修改为公网可路由的IP地址</p><h5 id="DNAT：目标网络地址转换："><a href="#DNAT：目标网络地址转换：" class="headerlink" title="DNAT：目标网络地址转换："></a><strong>DNAT：</strong>目标网络地址转换：</h5><p>用于将外部请求的目标地址转换为内网中的特定IP地址</p><h5 id="SNAT和DNAT的使用场景："><a href="#SNAT和DNAT的使用场景：" class="headerlink" title="SNAT和DNAT的使用场景："></a>SNAT和DNAT的使用场景：</h5><h6 id="DNAT技术通常用于以下几种情况："><a href="#DNAT技术通常用于以下几种情况：" class="headerlink" title="DNAT技术通常用于以下几种情况："></a>DNAT技术通常用于以下几种情况：</h6><ul><li>允许外部用户通过互联网访问内部Web服务器、邮件服务器等服务。</li><li>允许外部用户通过VPN连接到内部网络。</li><li>允许外部用户使用远程桌面协议（RDP）连接内部Windows服务器。</li></ul><h6 id="SNAT技术通常用于以下几种情况："><a href="#SNAT技术通常用于以下几种情况：" class="headerlink" title="SNAT技术通常用于以下几种情况："></a>SNAT技术通常用于以下几种情况：</h6><ul><li>增加<a href="https://cloud.tencent.com/product/ns?from_column=20065&from=20065">网络安全</a>性，防止来自外部网络的攻击。</li><li>控制流量分配，以提高网络带宽效率。</li><li>允许内部计算机访问外部资源。</li></ul><p>一个端口号是16位表示，65525个端口）</p><h5 id="ISP-Internet-Service-Provider"><a href="#ISP-Internet-Service-Provider" class="headerlink" title="ISP:Internet Service Provider:"></a>ISP:Internet Service Provider:</h5><p>互联网服务提供商，就是联通移动电信这一类给你提供上网的</p><p>ipconfig/release：ip查看并且释放</p><p>ipconfig/renew：ip查看并且重新连接</p><p><strong>防火墙在网络层，WAF在应用层</strong></p><p><strong>为什么防火墙会知道你是ICMP，因为他在解析传输层中会看到里面的协议Protocal</strong></p><p>同一子网，看ARP缓存）</p><p><a href="https://zhuanlan.zhihu.com/p/148644458">https://zhuanlan.zhihu.com/p/148644458</a></p><p>TCP FIN可以用来知道你的从操作系统是什么</p><p>常见的端口号</p><p><a href="https://imgse.com/i/picEaNT"><img src="https://z1.ax1x.com/2023/12/06/picEaNT.png" alt="picEaNT.png"></a></p><p>其中FTP的20端口是用来进行数据传输，21端口是用来进行访问控制</p><h4 id="引导协议BOOTP"><a href="#引导协议BOOTP" class="headerlink" title="引导协议BOOTP"></a>引导协议BOOTP</h4><p>是一种基于UDP的协议。用于从服务器得到自己的IP地址、服务器的IP地址、启动映像文件名、网关IP等等</p><h5 id="获取IP地址的过程"><a href="#获取IP地址的过程" class="headerlink" title="获取IP地址的过程"></a>获取IP地址的过程</h5><p>首先，客户端使用广播形式以IP地址255.255.255.255向网络中发出IP地址查询要求。运行BOOTP协议的服务器接收到这个请求，会发送一个含有IP地址、服务器IP地址、网关等信息的FOUND帧。客户端会根据该FOUND帧来获得自己的IP地址</p><h4 id="动态地址配置协议DHCP协议（Dynamic-Host-Configuration-Protocol）"><a href="#动态地址配置协议DHCP协议（Dynamic-Host-Configuration-Protocol）" class="headerlink" title="动态地址配置协议DHCP协议（Dynamic Host Configuration Protocol）"></a>动态地址配置协议DHCP协议（Dynamic Host Configuration Protocol）</h4><p>DHCP是BOOTP的扩展，基于客户/服务器模式的，提供了一种动态指定IP地址和配置参数的机制。</p><h5 id="DHCP的工作原理"><a href="#DHCP的工作原理" class="headerlink" title="DHCP的工作原理"></a>DHCP的工作原理</h5><p>寻找DHCP服务器（发布一个DHCP广播包来得知DHCP服务器），提供IP租用地址（在某一时间段来使用的地址，并不是固定给这个客户使用），接受IP租约</p><p><a href="https://www.jianshu.com/p/f013acd35898">BOOTP协议与DHCP协议 - 简书 (jianshu.com)</a></p><h4 id="网络指纹："><a href="#网络指纹：" class="headerlink" title="网络指纹："></a>网络指纹：</h4><p>网络指纹是指在互联网上识别和跟踪用户的一种方法，通过收集和分析用户在网络上的行为、设备信息、软件配置等数据来创建对用户的唯一标识。网络指纹通常包括以下内容：</p><ol><li><strong>设备信息</strong>: 包括用户的操作系统、浏览器类型和版本、屏幕分辨率、时区等设备特征。</li><li><strong>网络属性</strong>: 包括用户的 IP 地址、网络提供商（ISP）信息、地理位置等。</li><li><strong>浏览行为</strong>: 包括用户的点击模式、页面浏览习惯、访问频率等。</li><li><strong>其他参数</strong>: 一些网站还可能收集关于用户的其他信息，比如语言设置、插件信息、字体配置等。</li></ol><p>通过收集这些信息，网站和广告商可以创建一个独特的“指纹”来标识和跟踪用户，即使用户在不同设备和网络下访问网站，也可以被识别出来。</p><p>网络指纹技术的使用可以帮助网站提供个性化的服务，但也引发了隐私保护的问题。一些用户可能认为这种行为侵犯了他们的隐私权，因此网络指纹也成为了隐私保护领域的一个重要议题。</p><h5 id="os-fngerprinting"><a href="#os-fngerprinting" class="headerlink" title="os fngerprinting"></a>os fngerprinting</h5><p>操作系统指纹识别（OS fingerprinting）是一种通过识别和分析网络上连接的设备的特征来确定其操作系统的方法。它基于操作系统在网络通信中产生的一些特定行为和响应模式。</p><p>操作系统指纹识别的原理是通过发送一系列特定的网络请求，观察目标设备在响应时所表现出的行为和特征，从而推断出该设备正在运行的操作系统类型和版本。</p><p>这些特征可能包括：</p><ol><li><strong>TCP/IP栈实现</strong>: 不同的操作系统对于TCP/IP协议栈的实现方式有所差异，如TCP/IP选项、初始序列号(ISN)的生成方式等。</li><li><strong>网络协议响应</strong>: 操作系统对网络请求的响应可能会有不同的行为，比如对于某些特定的请求或错误条件的处理方式。</li><li><strong>时间延迟和超时</strong>: 操作系统在响应网络请求时可能会有不同的延迟和超时设置。</li><li><strong>默认开放的网络端口</strong>: 不同操作系统可能会默认打开一些特定的网络端口，这些端口可以用于区分操作系统类型。</li></ol><p>通过分析这些特征，网络安全工具和技术可以尝试识别设备的操作系统，并据此进行针对性的漏洞扫描、探测等操作。</p><p>需要注意的是，操作系统指纹识别并非完全准确，不同的设备和网络环境可能导致结果的误判或不准确性。此外，一些设备可能会采取措施来隐藏或模糊操作系统指纹，以增加网络安全性。</p><h5 id="CIDR地址"><a href="#CIDR地址" class="headerlink" title="CIDR地址"></a>CIDR地址</h5><p>这个佬写的很详细了，我就不买弄了（）</p><p><a href="https://blog.csdn.net/dan15188387481/article/details/49873923">CIDR地址块及其子网划分（内含原始IP地址分类及其子网划分的介绍）_cidr块-CSDN博客</a></p><p>wifi安全性</p><p>学校的wifi根据MAC地址的前六个字节判断是否是虚拟机来请求IP，如果是则拒绝</p><p>防火墙工作原理</p><p>防护墙作用在非军事区，用于将内网和外部网络隔离开</p><p>操作系统协议栈，指纹</p><p>这个上面说了，可以往上回看</p><p>nmap探测</p><p>常见的就是-A -O -sP -p -sV</p><p>-sP 10.0.105.1/24 ：探测10.0.105网段中的全部主机。</p><p>-O IP ：探测指定IP的相关数据。</p><p>-p 端口号1，端口号2 IP : 探测指定IP是否打开指定端口</p><p>-p 端口号1，端口号2 IP -sV：探测指定IP、指定端口是那个版本的软件打开的。</p><p>-A IP -oN 存储路径：在指定路径下生成相关操作的txt报告。</p><p>-A IP ：扫描指定IP的全部内容。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网络渗透测试CH5</title>
+      <link href="/2023/12/05/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH5/"/>
+      <url>/2023/12/05/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH5/</url>
+      
+        <content type="html"><![CDATA[<p>上周因为考试咕咕了，这次补上（）</p><p>数据链路只在两个结点</p><p><a href="https://imgse.com/i/picZDmR"><img src="https://z1.ax1x.com/2023/12/06/picZDmR.png" alt="picZDmR.png"></a><br><a href="https://imgse.com/i/picZw6J"><img src="https://z1.ax1x.com/2023/12/06/picZw6J.png" alt="picZw6J.png"></a></p><p>信息封装过程：</p><p><a href="https://imgse.com/i/picZ0X9"><img src="https://z1.ax1x.com/2023/12/06/picZ0X9.png" alt="picZ0X9.png"></a></p><p>HTTP：超文本传输协议</p><p>路由器可以被看成是一台计算机而交换机可以堪称线</p><p>问：怎么知道网关MAC地址</p><p>ARP广播）</p><p>封装时的类型</p><p>0x0800  IP</p><p>0x0806  ARP</p><p>DHCP动态主机配置协议</p><p>DHCP 和DNS协议是在应用层，用UDP</p><p>Ip,子网掩码，DNS服务器，默认网关</p><p>源端口0.0.0.0————–》255.255.255。255</p><p>​            DHCP客户端                                DHCP服务器</p><p>​                                        —-广播—》</p><p>​                                        《—单播—</p><p>可进行的攻击</p><p>ARP假冒</p><p>ARP断网攻击</p><p>制作钓鱼网站</p><p>伪造DNS</p><p>假冒客户端耗尽资源池（死亡之Ping）</p><p>非法冒充DHCP</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网络渗透测试CH4</title>
       <link href="/2023/11/20/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95ch4/"/>
       <url>/2023/11/20/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95ch4/</url>
