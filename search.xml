@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>网络渗透测试</title>
+      <link href="/2024/03/03/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH7/"/>
+      <url>/2024/03/03/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH7/</url>
+      
+        <content type="html"><![CDATA[<p>emmm，这节课好像没什么笔记，就简单的写一下nmap的使用以及实验中使用两个虚拟机进行arp欺骗</p><h4 id="nmap上帝之眼的使用"><a href="#nmap上帝之眼的使用" class="headerlink" title="nmap上帝之眼的使用"></a>nmap上帝之眼的使用</h4><p>nmap -O </p><p>NMAP -sS</p><h5 id="使用两台虚拟机进行arp欺骗"><a href="#使用两台虚拟机进行arp欺骗" class="headerlink" title="使用两台虚拟机进行arp欺骗"></a>使用两台虚拟机进行arp欺骗</h5><p>上来先安装</p><p>apt install arpscoof</p><p>如果不成功的话进行换源就好了）</p><p>查看是否安装成功</p><p>arpspoof -h</p><p>提示是arpspoof -i 网卡 -t 要攻击的主机ip -r要攻击的主机的默认网关</p><p>我使用的是使用两个虚拟机进行操作</p><p>这时候需要进行端口转发使得能正常使用。</p><p>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网络渗透测试CH8</title>
+      <link href="/2024/03/03/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH8/"/>
+      <url>/2024/03/03/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH8/</url>
+      
+        <content type="html"><![CDATA[<h5 id="网络渗透测试行业标准"><a href="#网络渗透测试行业标准" class="headerlink" title="网络渗透测试行业标准"></a>网络渗透测试行业标准</h5><ul><li>前期与客户的交流阶段‘</li><li>情报的收集阶段</li><li>威胁建模阶段</li><li>漏洞分析阶段</li><li>漏洞利用阶段</li><li>后渗透攻击阶段</li><li>报告阶段</li></ul><p>SAM破解</p><p>kon-boot系统启动盘（）</p><p>挑战/响应认证方式（challenge/response）</p><p>免杀</p><p>双向远程控制连接</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网络渗透测试CH6</title>
       <link href="/2023/12/08/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH6/"/>
       <url>/2023/12/08/%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95CH6/</url>
